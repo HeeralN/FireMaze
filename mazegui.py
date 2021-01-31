@@ -13,9 +13,9 @@ def generateMaze(dim, p):
             else: 
                 r = random.random()
                 if(r < p):
-                    currRow.append("|")
+                    currRow.append(":")    #":" means empty
                 elif(r >= p):
-                   currRow.append(":")
+                   currRow.append("|")     #"|" means filled
         maze.append(currRow)
 
     #print maze
