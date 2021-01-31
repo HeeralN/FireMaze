@@ -1,24 +1,32 @@
+import random
+
 def generateMaze(dim, p):
     maze = []
+    #generate maze row by row
     for x in range(dim):
         currRow = []
         for y in range(dim):
             if(x==0 and y==0):
-                print("S", end =" ")
-                continue
+                currRow.append("S")
             elif(x==dim-1 and y==dim-1):
-                print("G", end =" ")
+                currRow.append("G")
             else: 
-                #if():
+                r = random.random()
+                if(r < p):
                     currRow.append("|")
-                    print("|", end =" ")
-                #elif():
-                #    print("Empty")
+                elif(r >= p):
+                   currRow.append(":")
         maze.append(currRow)
+
+    #print maze
+    for a in range(dim):
+        for b in range(dim):
+            print(maze[a][b], end =" ")
         print()
 
 
 generateMaze(5, 0.25)
+
 
 
 
