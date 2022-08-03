@@ -14,4 +14,4 @@ In order to find the best strategy to exit the maze, we tried several different 
 - Strategy 3: We created an A* algorithm that was a combination of Strategies 1 and 2 but is a more efficient algorithm by adding a cost heuristic to when the path should be recomputed. It also adds a weight predict where the fire is likely to spread in the future so that path is less favored by the agent.
 
 
-Improvements in the future include a time constraint for when the next step should be taken in to simulate a real life scenario.
+Improvements in the future include a time constraint for when the next step should be taken to simulate a real life scenario.
